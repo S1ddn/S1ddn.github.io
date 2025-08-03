@@ -17,33 +17,64 @@ section {
 }
 
 /* HERO VIDEO */
-.hero-section {
-  position: relative;
-  text-align: center;
+.hero-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
   background: #111;
   color: white;
-  padding: 3rem 1rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
-.hero-content {
-  z-index: 2;
-  position: relative;
-  margin-bottom: 1rem;
+.hero-text {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 280px;
 }
 
-.video-container {
-  max-width: 500px;
-  margin: 0 auto;
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.hero-video {
+  flex: 1;
+  max-width: 480px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  min-width: 300px;
 }
 
-.video-container video {
+.hero-video video {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 12px;
 }
+
+/* Optional: Add media query for mobile */
+@media (max-width: 768px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
 
 /* Tags */
 .tags {
