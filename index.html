@@ -2,82 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siddharth Nadupalli | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<header>
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="typing.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div class="overlay">
-    <h1>Siddharth Nadupalli</h1>
-    <p>Data Analyst | ML & AI Enthusiast | B.Tech CSE</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- HERO VIDEO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Siddharth Nadupalli</h1>
+      <p>Data Analyst | ML & AI Enthusiast | B.Tech CSE</p>
+    </div>
+    <div class="video-container">
+      <video src="typing.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </section>
 
-
+  <!-- OTHER CONTENT -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I'm a recent Computer Science graduate from Shiv Nadar University with hands-on experience in data analysis, machine learning, and AI projects. I love building real-world solutions using data, and have interned at DRDO and Blue Light LLP working on projects ranging from power dashboards to predictive models.
+      I'm a Computer Science graduate from Shiv Nadar University with hands-on experience in data analysis, machine learning, and real-world AI applications. I love building creative and efficient solutions.
     </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <div>
-      <span class="tag">Python</span>
-      <span class="tag">SQL</span>
-      <span class="tag">HTML/CSS</span>
-      <span class="tag">React.js</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Power BI</span>
-      <span class="tag">QGIS</span>
-      <span class="tag">Machine Learning</span>
-      <span class="tag">Deep Learning</span>
-      <span class="tag">Data Visualization</span>
+    <div class="tags">
+      <span>Python</span><span>SQL</span><span>React</span><span>Node.js</span><span>Machine Learning</span><span>Power BI</span>
     </div>
   </section>
 
   <section id="projects">
-    <h2>Projects & Internships</h2>
-
-    <div class="card">
-      <h3>Horse Race Prediction Model (Blue Light LLP)</h3>
-      <p>Developed a predictive model using Logistic Regression, SVM, and Random Forest (88.55% accuracy) on 5 years of horse race data.</p>
-    </div>
-
-    <div class="card">
-      <h3>Power Dashboard (DRDO DRDL)</h3>
-      <p>Built a real-time power supply management dashboard using Node.js, SQLite3, and HTML/CSS.</p>
-    </div>
-
-    <div class="card">
-      <h3>Crop Area Estimation with WASSAN</h3>
-      <p>Used drone imagery and deep learning (YOLOv8s, VGG16) for agricultural land classification and analysis.</p>
-    </div>
-
-    <div class="card">
-      <h3>Emotion Detection Web App</h3>
-      <p>Created a Streamlit web app to classify text into six emotions using SVM, Logistic Regression, and Naive Bayes.</p>
-    </div>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Horse Race Predictor</strong> – ML model with 88.5% accuracy using Logistic Regression & Random Forest</li>
+      <li><strong>DRDO Dashboard</strong> – Real-time power monitoring dashboard using Node.js & SQLite</li>
+    </ul>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <p>
-      <a href="SiddharthN_jav.pdf" download>Download My Resume (PDF)</a>
-    </p>
+    <a href="SiddharthN_jav.pdf" download>Download My Resume (PDF)</a>
   </section>
 
   <section id="contact">
@@ -87,8 +55,6 @@
     <p>LinkedIn: <a href="https://linkedin.com/in/s1ddharthn" target="_blank">s1ddharthn</a></p>
   </section>
 
-  <footer>
-    &copy; 2025 Siddharth Nadupalli. All rights reserved.
-  </footer>
+  <footer>&copy; 2025 Siddharth Nadupalli</footer>
 </body>
 </html>
