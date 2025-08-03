@@ -1,99 +1,97 @@
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #f9f9f9;
-  color: #333;
+  font-family: 'Inter', sans-serif;
+  background-color: #2b2b2b;
+  color: #f0f0f0;
   line-height: 1.6;
 }
 
-h1, h2 {
-  color: #222;
+a {
+  color: #66d9ef;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-section {
-  padding: 3rem 1.5rem;
-  max-width: 900px;
+.section {
+  max-width: 1000px;
+  padding: 3rem 2rem;
   margin: auto;
 }
 
-/* HERO VIDEO */
-.hero-flex {
+h1, h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Hero Layout */
+.hero {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
   padding: 4rem 2rem;
-  background: #111;
-  color: white;
   max-width: 1200px;
   margin: auto;
   flex-wrap: wrap;
 }
 
-.hero-text {
+.hero-left {
   flex: 1;
-  padding-right: 2rem;
   min-width: 280px;
 }
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+.hero-left h1 {
+  font-size: 2.8rem;
+}
+.hero-left p {
+  font-size: 1.1rem;
+  color: #ddd;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-.hero-video {
+.hero-right {
   flex: 1;
-  max-width: 480px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
   min-width: 300px;
+  max-width: 480px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
-
-.hero-video video {
+.hero-right video {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
 }
 
-/* Optional: Add media query for mobile */
-@media (max-width: 768px) {
-  .hero-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-}
-
-
-/* Tags */
+/* Skills Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
-
 .tags span {
-  background: #e0e0e0;
+  background: #444;
+  color: #eee;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  font-size: 0.9rem;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background: #111;
-  color: white;
-  padding: 1rem;
-  margin-top: 3rem;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left {
+    padding-top: 1rem;
+  }
 }
