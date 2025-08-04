@@ -1,97 +1,193 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0D0E11;
-  color: #f0f0f0;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddharth Nadupalli | Aspiring ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0D0E11;
+      --text: #f0f0f0;
+      --primary: #ffe600;
+      --secondary: #111;
+      --gray: #999;
+    }
 
-a {
-  color: #66d9ef;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.section {
-  max-width: 1000px;
-  padding: 3rem 2rem;
-  margin: auto;
-}
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-h1, h2 {
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-/* Hero Layout */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: auto;
-  flex-wrap: wrap;
-}
+    header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: transparent;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
 
-.hero-left {
-  flex: 1;
-  min-width: 280px;
-}
-.hero-left h1 {
-  font-size: 2.8rem;
-}
-.hero-left p {
-  font-size: 1.1rem;
-  color: #ddd;
-}
+    header.navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
 
-.hero-right {
-  flex: 1;
-  min-width: 300px;
-  max-width: 480px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-}
-.hero-right video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    .nav-left {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: white;
+    }
 
-/* Skills Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-.tags span {
-  background: #444;
-  color: #eee;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-}
+    .nav-links a {
+      margin: 0 1rem;
+      color: var(--text);
+      font-weight: 500;
+    }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #aaa;
-}
+    .resume-btn {
+      background: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-weight: bold;
+      color: black;
+    }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-left {
-    padding-top: 1rem;
-  }
-}
+    .hero {
+      padding: 10rem 2rem 6rem;
+      text-align: center;
+      background: radial-gradient(circle at center, #121212 0%, #0D0E11 100%);
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #333;
+      color: var(--primary);
+      padding: 0.3rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0.5rem 0;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: #ccc;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: black;
+      box-shadow: 0 0 12px rgba(255, 230, 0, 0.5);
+    }
+
+    .btn.secondary {
+      border: 2px solid #fff;
+      color: white;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #161616;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: #ddd;
+      text-align: center;
+    }
+
+    .card span {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .project {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      background: #0B0C0F;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- (HTML content stays the same) -->
+</body>
+</html>
